@@ -57,7 +57,7 @@ class RegistrationController extends ModuleRegistration
         // If opt-in is enabled, create the opt-in token and thus the ##link## simple token
         if ($this->nc_registration_auto_activate) {
             if ($this->parameterBag->has('contao.registration.expiration')) {
-                $removeOn = new \DateTime('+' . $this->parameterBag->get('contao.registration.expiration') . ' days');
+                $removeOn = new \DateTime('+'.$this->parameterBag->get('contao.registration.expiration').' days');
             } else {
                 $removeOn = null;
             }
